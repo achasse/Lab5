@@ -9,7 +9,7 @@
 #include "LineNumberList.h"
 #include <iostream>
 
-class IdentiferToken: public Token
+class IdentifierToken: public Token
 {
 
 	private:
