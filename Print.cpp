@@ -67,6 +67,7 @@ void Print::printToken(Token *token)
     char line[MAX_SOURCE_LINE_LENGTH + 32];
     const char *symbol_string = SYMBOL_STRINGS[token->getCode()];
     
+    /*
     switch (token->getCode())
     {
         case NUMBER:
@@ -86,13 +87,17 @@ void Print::printToken(Token *token)
             sprintf(line, "    >> %-16s %-s\n", symbol_string, token->getTokenString().c_str());
             break;
     }
+    */
+    sprintf(line, "    >> %-16s ", symbol_string);
     printLine(line);
+    //now call the token's print function to print the actual data
+    tok->print();
 }
 int Print::getLineCount()
 {
     return this->lineCount;
 }
-void Print::printTreeRecursive(Token *identifier)
+void Print::printTreeRecursive(IdentifierToken *identifier)
 {
     char line[MAX_SOURCE_LINE_LENGTH + 32];
     
@@ -115,7 +120,7 @@ void Print::printTreeRecursive(Token *identifier)
         printTreeRecursive(identifier->getRightChild());
     }
 }
-void Print::printTree(Token *identifier)
+void Print::printTree(IdentifierToken *identifier)
 {
     cout << "\n Cross Reference Information\n";
     cout << " Identifier \t\tLine Numbers\n";
