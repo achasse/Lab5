@@ -20,9 +20,9 @@ using namespace std;
  ***************/
 class Token
 {
-private:
+protected:
     TokenCode code;
-
+    string tokenString;
 /*
     LiteralType type;
 
@@ -34,7 +34,6 @@ private:
     }
     literal;
 */
-    string tokenString;
     
     //Token *leftChild;
     //Token *rightChild;
