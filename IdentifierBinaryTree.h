@@ -22,7 +22,7 @@ public:
     IdentifierBinaryTree();
     ~IdentifierBinaryTree();
     void setTreeRoot(IdentifierToken *root);
-    Token *getTreeRoot();
+    IdentifierToken *getTreeRoot();
     bool addIdentifier(IdentifierToken *tok, int lineNum);
 };
 
