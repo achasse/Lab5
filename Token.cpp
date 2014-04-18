@@ -10,13 +10,15 @@
 Token::Token()
 {
     //What code do I need here to initialize everything.
-    setLeftChild(NULL);
-    setRightChild(NULL);
-    list = NULL;
+    //setLeftChild(NULL);
+    //setRightChild(NULL);
+    //list = NULL;
 }
 Token::~Token()
 {
     //What code do I need here to free memory
+
+/*
     LineNumberList *root = getLineNumberList();
     LineNumberList *tmp = root;
     
@@ -30,6 +32,7 @@ Token::~Token()
     {
         free(this->literal.stringLiteral);
     }
+*/
 }
 void Token::setCode(TokenCode newCode)
 {
@@ -39,6 +42,7 @@ TokenCode Token::getCode()
 {
     return this->code;
 }
+/*
 void Token::setType(LiteralType newType)
 {
     this->type = newType;
@@ -72,6 +76,7 @@ string Token::getStringLiteral()
 {
     return string(this->literal.stringLiteral);
 }
+*/
 void Token::setTokenString(string s)
 {
     this->tokenString = s;
@@ -80,7 +85,11 @@ string Token::getTokenString()
 {
     return this->tokenString;
 }
-//What methods am I missing to implement a binary tree.
+virtual void print()
+{
+	//nothing needs to be in here since no base type Token objects
+}
+/*
 void Token::setLeftChild(Token *tok)
 {
     this->leftChild = tok;
@@ -118,3 +127,5 @@ LineNumberList *Token::getLineNumberList()
 {
     return this->list;
 }
+*/
+

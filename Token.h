@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include "common.h"
-#include "LineNumberList.h"
+//#include "LineNumberList.h"
 
 using namespace std;
 
@@ -22,7 +22,10 @@ class Token
 {
 private:
     TokenCode code;
+
+/*
     LiteralType type;
+
     union
     {
         int integer;
@@ -30,11 +33,12 @@ private:
         char *stringLiteral;
     }
     literal;
+*/
     string tokenString;
-    //What variables and methods am I missing to implement a binary tree.
-    Token *leftChild;
-    Token *rightChild;
-    LineNumberList *list;
+    
+    //Token *leftChild;
+    //Token *rightChild;
+    //LineNumberList *list;
     
 public:
     Token();
@@ -42,21 +46,24 @@ public:
     void setCode(TokenCode newCode);
     TokenCode getCode();
     void setType(LiteralType newType);
-    LiteralType getType();
-    void setLiteral(int newInteger);
-    int getIntLiteral();
-    void setLiteral(float newReal);
-    float getRealLiteral();
-    void setLiteral(string newString);
-    string getStringLiteral();
+    //LiteralType getType();
+    //void setLiteral(int newInteger);
+    //int getIntLiteral();
+    //void setLiteral(float newReal);
+    //float getRealLiteral();
+    //void setLiteral(string newString);
+    //string getStringLiteral();
     void setTokenString(string s);
     string getTokenString();
-    void setLeftChild(Token *tok);
-    Token *getLeftChild();
-    void setRightChild(Token *tok);
-    Token *getRightChild();
-    void addToLineNumberList(LineNumberList *listItem);
-    LineNumberList *getLineNumberList();
+    //void setLeftChild(Token *tok);
+    //Token *getLeftChild();
+    //void setRightChild(Token *tok);
+    //Token *getRightChild();
+    //void addToLineNumberList(LineNumberList *listItem);
+    //LineNumberList *getLineNumberList();
+
+    //the print function to be implemented
+    virtual void print();
 };
 
 #endif /* defined(__Lab4__Token__) */
