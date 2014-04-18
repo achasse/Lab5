@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include "common.h"
-#include "Token.h"
+#include "IdentifierToken.h"
 
 using namespace std;
 
