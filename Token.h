@@ -20,7 +20,7 @@ using namespace std;
  ***************/
 class Token
 {
-protected:
+private:
     TokenCode code;
     string tokenString;
 /*
