@@ -31,4 +31,4 @@ class IdentiferToken: public Token
 		
 		virtual void print();
 
-}
+};
