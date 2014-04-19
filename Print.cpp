@@ -91,7 +91,7 @@ void Print::printToken(Token *token)
     sprintf(line, "    >> %-16s ", symbol_string);
     printLine(line);
     //now call the token's print function to print the actual data
-    tok->print();
+    token->print();
 }
 int Print::getLineCount()
 {
