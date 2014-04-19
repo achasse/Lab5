@@ -33,6 +33,11 @@ int main(int argc, const char * argv[])
         print.printToken(token);
         if (token->getCode() == IDENTIFIER)
         {
+            //dynamic cast base type 'Token' pointer to 'IdentifierToken'
+            //to add to binary tree. Scanner must have returned base pointer to an object that 
+            //was allocated as an 'IdentifierToken' type for this to work, otherwise 
+            //id_token == 0 after the dynamic_cast. 
+            id_token = dynamic_cast<IdentifierToken*>(token);
             tree.addIdentifier(id_token, scanner.getLineNumber());
         }
         else if (token->getCode() != PERIOD && token->getCode() != END_OF_FILE)
