@@ -4,6 +4,9 @@
 //Identifer Token Header File
 //
 
+#ifndef __Lab5__IdentifierToken__
+#define __Lab5__IdentifierToken__
+
 
 #include "Token.h"
 #include "LineNumberList.h"
@@ -32,3 +35,5 @@ class IdentifierToken: public Token
 		virtual void print();
 
 };
+
+#endif
