@@ -25,7 +25,7 @@ class IdentifierToken: public Token
 		void setLeftChild(IdentifierToken *tok);
 		void setRightChild(IdentifierToken *tok);
 		IdentifierToken* getLeftChild();
-		IdentifierToken* getRightChild()
+		IdentifierToken* getRightChild();
 		void addToLineNumberList(LineNumberList *listItem);
 		LineNumberList *getLineNumberList();
 		
