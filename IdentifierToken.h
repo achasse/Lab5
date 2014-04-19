@@ -19,7 +19,7 @@ class IdentifierToken: public Token
 		LineNumberList *list;
 		
 	public:
-		IdentiferToken();
+		IdentifierToken();
 		~IdentifierToken();
 		
 		void setLeftChild(IdentfierToken *tok);
