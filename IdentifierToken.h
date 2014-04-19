@@ -22,7 +22,7 @@ class IdentifierToken: public Token
 		IdentifierToken();
 		~IdentifierToken();
 		
-		void setLeftChild(IdentfierToken *tok);
+		void setLeftChild(IdentifierToken *tok);
 		void setRightChild(IdentifierToken *tok);
 		IdentifierToken* getLeftChild();
 		IdentifierToken* getRightChild()
