@@ -5,7 +5,7 @@
 #ifndef __Lab5__Literal__
 #define __Lab5__Literal__ 
 
-#include <Token.h>
+#include "Token.h"
 
 class Literal : public Token
 {
