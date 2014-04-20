@@ -6,31 +6,29 @@ template <typename T>
  
 class Literal : public Token 
 {
-  private:
-    T literal;
+  Literal::Literal(T lit)
+  {
+    setLiteral(lit);
+  }
   
-  public:
-    
-    Literal(T lit)
-    {
-      setLiteral(lit);
-    }//end of constructor
-    
-    ~Literal()
-    {
-    
-    }//end of destructor
-    
-    void setLiteral(T lit)
-    {
-      literal = lit;
-    }//end of setLiteral
-    
-    T getVar()
-    {
-      return literal;
-    }//end of getVar
-    
-    virtual void print() = 0; //virtual function for print.
+  Literal::~Literal()
+  {
+   
+  }
+  
+  void Literal::setLiteral(T lit)
+  {
+   literal = lit;
+  }
+  
+  T Literal::getLiteral()
+  {
+   return literal;
+  }
+  
+  void print()
+  {
+   
+  }
     
 }//end of Literal class
