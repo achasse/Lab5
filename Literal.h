@@ -18,8 +18,8 @@ class Literal : public Token
     Literal(T lit);
     ~Literal();
     void setLiteral(T lit);
-    T getVar();
-    virtual void print();
+    T getLiteral();
+    virtual void print() = 0;
 };
 
 #endif
