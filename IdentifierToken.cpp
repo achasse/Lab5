@@ -64,7 +64,7 @@ LineNumberList *IdentiferToken::getLineNumberList()
 {
     return this->list;
 }
-void print()
+void IdentifierToken::print()
 {
     sprintf("%-s\n", this->getTokenString() );
 }
