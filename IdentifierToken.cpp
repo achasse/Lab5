@@ -12,7 +12,11 @@ IdentifierToken::IdentifierToken()
     setLeftChild(NULL);
     setRightChild(NULL);
     list = NULL;
+    //We know TokenCode will be an IDENTIFIER if a new object
+    //of IdentifierToken is being created.
+    setCode(IDENTIFIER);
 }
+
 IdentifierToken::~IdentifierToken()
 {
    
