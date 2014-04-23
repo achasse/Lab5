@@ -85,9 +85,9 @@ string Token::getTokenString()
 {
     return this->tokenString;
 }
-virtual void print()
+virtual void Token::print()
 {
-	//nothing needs to be in here since no base type Token objects
+	sprintf("%-s\n", this->getTokenString().c_str() );
 }
 /*
 void Token::setLeftChild(Token *tok)
