@@ -23,6 +23,7 @@ class IdentifierToken: public Token
 		
 	public:
 		IdentifierToken();
+		IdentifierToken(string tok_string)
 		~IdentifierToken();
 		
 		void setLeftChild(IdentifierToken *tok);
