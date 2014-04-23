@@ -16,7 +16,18 @@ IdentifierToken::IdentifierToken()
     //of IdentifierToken is being created.
     setCode(IDENTIFIER);
 }
-
+//Constructor with the token string being passed in
+IdentifierToken::IdentifierToken(string tok_string)
+{
+    
+    setLeftChild(NULL);
+    setRightChild(NULL);
+    list = NULL;
+    //We know TokenCode will be an IDENTIFIER if a new object
+    //of IdentifierToken is being created.
+    setCode(IDENTIFIER);
+    setTokenString(tok_string);
+}
 IdentifierToken::~IdentifierToken()
 {
    
