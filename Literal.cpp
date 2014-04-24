@@ -2,33 +2,34 @@
  * This is the header file for template function for literal class.
  */
  
+#include "Literal.h"
+
 template <typename T>
- 
-class Literal : public Token 
+Literal<T>::Literal(T lit)
 {
-  Literal::Literal(T lit)
-  {
-    setLiteral(lit);
-  }
+	setLiteral(lit);
+}
   
-  Literal::~Literal()
-  {
+template<class T>
+Literal<T>::~Literal()
+{
    
-  }
+}
   
-  void Literal::setLiteral(T lit)
-  {
-   literal = lit;
-  }
+template<class T>
+void Literal<T>::setLiteral(T lit)
+{
+	literal = lit;
+}
   
-  T Literal::getLiteral()
-  {
-   return literal;
-  }
+template<class T>
+T Literal<T>::getLiteral()
+{
+	return literal;
+}
   
-  void print()
-  {
+template<class T>
+void Literal<T>::print()
+{
    
-  }
-    
-}//end of Literal class
+}
