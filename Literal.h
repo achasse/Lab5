@@ -6,7 +6,9 @@
 #define __Lab5__Literal__ 
 
 #include "Token.h"
+#include "common.h"
 
+template<class T>
 class Literal : public Token
 {
   private:
