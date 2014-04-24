@@ -41,7 +41,7 @@ void IdentifierBinaryTree::setTreeRoot(IdentifierToken *root)
 {
     this->treeRoot = root;
 }
-Token *IdentifierBinaryTree::getTreeRoot()
+IdentifierToken *IdentifierBinaryTree::getTreeRoot()
 {
     return this->treeRoot;
 }
