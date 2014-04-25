@@ -202,8 +202,8 @@ void Scanner::getWord(char *str, char *token_ptr, Token **tok)
 	*tok = new Token();
         (*tok)->setCode(code);
     }
-    *tok = new IdentifierToken();
-    (*tok)->setTokenString(string(str));
+    *tok = new IdentifierToken(string(str));
+  
 }
 void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
 {
