@@ -85,7 +85,7 @@ string Token::getTokenString()
 {
     return this->tokenString;
 }
-virtual void Token::print()
+void Token::print()
 {
 	sprintf("%-s\n", this->getTokenString().c_str() );
 }
