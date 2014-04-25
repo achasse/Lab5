@@ -84,7 +84,7 @@ Token* Scanner::getToken()
     char ch = '\0'; //This can be the current character you are examining during scanning.
     char token_string[MAX_TOKEN_STRING_LENGTH] = {'\0'}; //Store your token here as you build it.
     char *token_ptr = token_string; //write some code to point this to the beginning of token_string
-    Token *new_token = new Token();
+    Token *new_token = NULL;
     
     new_token->setType(NO_TYPE);
     //1.  Skip past all of the blanks
@@ -99,19 +99,19 @@ Token* Scanner::getToken()
     switch (char_table[ch])
     {//3.  Call the appropriate function to deal with the cases in 2.
         case LETTER:
-            getWord(token_string, token_ptr, new_token);
+            getWord(token_string, token_ptr, &new_token);
             break;
         case DIGIT:
-            getNumber(token_string, token_ptr, new_token);
+            getNumber(token_string, token_ptr, &new_token);
             break;
         case QUOTE:
-            getString(token_string, token_ptr, new_token);
+            getString(token_string, token_ptr, &new_token);
             break;
         case EOF_CODE:
             new_token->setCode(END_OF_FILE);
             break;
         default:
-            getSpecial(token_string, token_ptr, new_token);
+            getSpecial(token_string, token_ptr, &new_token);
             break;
     }
     
@@ -175,7 +175,7 @@ void Scanner::skipComment(char source_buffer[])
     }
     while ((ch != '}') && (ch != EOF_CHAR));
 }
-void Scanner::getWord(char *str, char *token_ptr, Token *tok)
+void Scanner::getWord(char *str, char *token_ptr, Token **tok)
 {
     /*
      Write some code to Extract the word
@@ -195,21 +195,22 @@ void Scanner::getWord(char *str, char *token_ptr, Token *tok)
      Write some code to Check if the word is a reserved word.
      if it is not a reserved word its an identifier.
      */
-    if (!isReservedWord(str, tok))
+    if (!isReservedWord(str, *tok))
     {
         //set token to identifier
-        tok->setCode(IDENTIFIER);
+		*tok = new Token();
+        (*tok)->setCode(IDENTIFIER);
     }
-    tok->setTokenString(string(str));
+	*tok = new IdentifierToken();
+    (*tok)->setTokenString(string(str));
 }
-void Scanner::getNumber(char *str, char *token_ptr, Token *tok)
+void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
 {
     /*
      Write some code to Extract the number and convert it to a literal number.
      */
     char ch = *line_ptr;
     bool int_type = true;
-    
     do
     {
         *(token_ptr++) = ch;
@@ -258,19 +259,23 @@ void Scanner::getNumber(char *str, char *token_ptr, Token *tok)
         while (char_table[ch] == DIGIT);
     }
     *token_ptr = '\0';
-    tok->setCode(NUMBER);
+    (*tok)->setCode(NUMBER);
     if (int_type)
     {
-        tok->setType(INTEGER_LIT);
-        tok->setLiteral((int)atoi(str));
+		Literal<int> *temp = new Literal<int>(0);
+        temp->setType(INTEGER_LIT);
+        temp->setLiteral((int)atoi(str));
+		*tok = temp;
     }
     else
     {
-        tok->setType(REAL_LIT);
-        tok->setLiteral((float)atof(str));
+		Literal<float> *temp = new Literal<float>(0);
+        temp->setType(REAL_LIT);
+        temp->setLiteral((float)atof(str));
+		*tok = temp;
     }
 }
-void Scanner::getString(char *str, char *token_ptr, Token *tok)
+void Scanner::getString(char *str, char *token_ptr, Token **tok)
 {
     /*
      Write some code to Extract the string
@@ -284,10 +289,12 @@ void Scanner::getString(char *str, char *token_ptr, Token *tok)
     }
     *token_ptr++ = *line_ptr++;
     *token_ptr = '\0';
-    tok->setCode(STRING);
-    tok->setType(STRING_LIT);
+	Literal<string> *temp = new Literal<string>(0);
+    temp->setCode(STRING);
+    temp->setType(STRING_LIT);
     string test(str);
-    tok->setLiteral(test);
+    temp->setLiteral(test);
+	*tok = temp;
 }
 void Scanner::getSpecial(char *str, char *token_ptr, Token *tok)
 {
