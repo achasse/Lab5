@@ -14,7 +14,6 @@
 #include "Print.h"
 #include "Literal.h"
 
-
 #define CHAR_TABLE_SIZE 256
 
 typedef enum
@@ -48,7 +47,7 @@ private:
     void getString(char *str, char *token_ptr, Token **tok);
     void getSpecial(char *str, char *token_ptr, Token *tok);
     void downshiftWord(char word[]);
-    bool isReservedWord(char *str, Token *tok);
+    bool isReservedWord(char *str, TokenCode *code);
     
 public:
     Scanner(FILE *source_file, char source_name[], char date[], Print printer);
