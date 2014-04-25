@@ -107,10 +107,12 @@ Token* Scanner::getToken()
             getString(token_string, token_ptr, &new_token);
             break;
         case EOF_CODE:
+	    new_token = new Token();
             new_token->setCode(END_OF_FILE);
             break;
         default:
-            getSpecial(token_string, token_ptr, &new_token);
+	    new_token = new Token();
+            getSpecial(token_string, token_ptr, new_token);
             break;
     }
     
@@ -203,7 +205,6 @@ void Scanner::getWord(char *str, char *token_ptr, Token **tok)
         (*tok)->setCode(code);
     }
     *tok = new IdentifierToken(string(str));
-  
 }
 void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
 {
@@ -260,21 +261,21 @@ void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
         while (char_table[ch] == DIGIT);
     }
     *token_ptr = '\0';
-    (*tok)->setCode(NUMBER);
     if (int_type)
     {
-		Literal<int> *temp = new Literal<int>(0);
+	Literal<int> *temp = new Literal<int>(0);
         temp->setType(INTEGER_LIT);
         temp->setLiteral((int)atoi(str));
-		*tok = temp;
+	*tok = temp;
     }
     else
     {
-		Literal<float> *temp = new Literal<float>(0);
+	Literal<float> *temp = new Literal<float>(0);
         temp->setType(REAL_LIT);
         temp->setLiteral((float)atof(str));
-		*tok = temp;
+	*tok = temp;
     }
+    (*tok)->setCode(NUMBER);
 }
 void Scanner::getString(char *str, char *token_ptr, Token **tok)
 {
@@ -290,12 +291,12 @@ void Scanner::getString(char *str, char *token_ptr, Token **tok)
     }
     *token_ptr++ = *line_ptr++;
     *token_ptr = '\0';
-	Literal<string> *temp = new Literal<string>(0);
+    Literal<string> *temp = new Literal<string>(0);
     temp->setCode(STRING);
     temp->setType(STRING_LIT);
     string test(str);
     temp->setLiteral(test);
-	*tok = temp;
+    *tok = temp;
 }
 void Scanner::getSpecial(char *str, char *token_ptr, Token *tok)
 {
