@@ -8,10 +8,12 @@
 #ifndef Lab4_Scanner_h
 #define Lab4_Scanner_h
 
+#include <stdlib.h>
 #include "common.h"
 #include "Token.h"
 #include "Print.h"
 #include "Literal.h"
+
 
 #define CHAR_TABLE_SIZE 256
 
