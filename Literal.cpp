@@ -1,5 +1,5 @@
 /*
- * This is the header file for template function for literal class.
+ * This is the implementation file for template function for literal class.
  */
  
 #include "Literal.h"
