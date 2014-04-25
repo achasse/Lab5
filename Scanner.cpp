@@ -86,8 +86,6 @@ Token* Scanner::getToken()
     char *token_ptr = token_string; //write some code to point this to the beginning of token_string
     Token *new_token = NULL;
     
-    //Note 1
-    new_token->setType(NO_TYPE);
     //1.  Skip past all of the blanks
     if (line_ptr == NULL)
     {
@@ -197,15 +195,14 @@ void Scanner::getWord(char *str, char *token_ptr, Token **tok)
      if it is not a reserved word its an identifier.
      */
      
-    //Note 2
-	TokenCode code;
+    TokenCode code;
     if (!isReservedWord(str, &code))
     {
         //set token to identifier
-		*tok = new Token();
+	*tok = new Token();
         (*tok)->setCode(code);
     }
-	*tok = new IdentifierToken();
+    *tok = new IdentifierToken();
     (*tok)->setTokenString(string(str));
 }
 void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
