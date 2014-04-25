@@ -17,8 +17,8 @@ class IdentifierToken: public Token
 
 	private:
 		//These are specific to an identifier Token
-		IdentifierToken *LeftChild;
-		IdentifierToken *RightChild;
+		IdentifierToken *leftChild;
+		IdentifierToken *rightChild;
 		LineNumberList *list;
 		
 	public:
