@@ -31,5 +31,5 @@ T Literal<T>::getLiteral()
 template<class T>
 void Literal<T>::print()
 {
-   
+   cout << literal << endl;
 }
