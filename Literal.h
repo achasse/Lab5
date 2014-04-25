@@ -21,7 +21,7 @@ class Literal : public Token
     ~Literal();
     void setLiteral(T lit);
     T getLiteral();
-    virtual void print() = 0;
+    virtual void print();
 };
 
 #endif
