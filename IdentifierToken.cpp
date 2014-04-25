@@ -75,7 +75,7 @@ void IdentifierToken::addToLineNumberList(LineNumberList *listItem)
         tmp->setNextLineNumber(listItem);
     }
 }
-LineNumberList *IdentiferToken::getLineNumberList()
+LineNumberList *IdentifierToken::getLineNumberList()
 {
     return this->list;
 }
