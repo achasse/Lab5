@@ -7,6 +7,7 @@
 
 #include "Print.h"
 #include "Token.h"
+#include "IdentifierToken.h"
 
 const char* const SYMBOL_STRINGS[] =
 {
