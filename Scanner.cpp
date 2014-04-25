@@ -198,11 +198,12 @@ void Scanner::getWord(char *str, char *token_ptr, Token **tok)
      */
      
     //Note 2
-    if (!isReservedWord(str, *tok))
+	TokenCode code;
+    if (!isReservedWord(str, &code))
     {
         //set token to identifier
 		*tok = new Token();
-        (*tok)->setCode(IDENTIFIER);
+        (*tok)->setCode(code);
     }
 	*tok = new IdentifierToken();
     (*tok)->setTokenString(string(str));
@@ -458,7 +459,7 @@ void Scanner::downshiftWord(char word[])
         word[index] = tolower(word[index]);
     }
 }
-bool Scanner::isReservedWord(char *str, Token *tok)
+bool Scanner::isReservedWord(char *str, TokenCode *code)
 {
     /*
      Examine the reserved word table and determine if the function input is a reserved word.
@@ -474,7 +475,7 @@ bool Scanner::isReservedWord(char *str, Token *tok)
             rw = rw_table[str_len - 2][i];
             if (strcmp(str, rw.string) == 0)
             {
-                tok->setCode(rw.token_code);
+                *code = rw.token_code;
                 return true;
             }
         }
