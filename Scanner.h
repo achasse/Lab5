@@ -13,6 +13,7 @@
 #include "Token.h"
 #include "Print.h"
 #include "Literal.h"
+#include "Literal.cpp"
 
 #define CHAR_TABLE_SIZE 256
 
