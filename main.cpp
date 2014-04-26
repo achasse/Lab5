@@ -9,7 +9,7 @@
 #include "common.h"
 #include "Print.h"
 #include "Scanner.h"
-#include "Token.h"
+#include "IdentifierToken.h"
 #include "IdentifierBinaryTree.h"
 
 FILE *init_lister(const char *name, char source_file_name[], char dte[]);
