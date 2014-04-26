@@ -41,6 +41,7 @@ private:
     
 public:
     Token();
+    Token(TokenCode newCode);
     ~Token();
     void setCode(TokenCode newCode);
     TokenCode getCode();
