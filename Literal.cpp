@@ -4,32 +4,31 @@
  
 #include "Literal.h"
 
-template <typename T>
-Literal<T>::Literal(T lit)
+template <class T> Literal<T>::Literal(T lit)
 {
 	setLiteral(lit);
 }
   
-template<class T>
-Literal<T>::~Literal()
+template<class T> Literal<T>::~Literal()
 {
    
 }
   
-template<class T>
-void Literal<T>::setLiteral(T lit)
+template<class T> void Literal<T>::setLiteral(T lit)
 {
 	literal = lit;
 }
   
-template<class T>
-T Literal<T>::getLiteral()
+template<class T> T Literal<T>::getLiteral()
 {
 	return literal;
 }
   
-template<class T>
-void Literal<T>::print()
+template<class T> void Literal<T>::print()
 {
    cout << literal << endl;
 }
+
+template class Literal<string>;
+template class Literal<int>;
+template class Literal<float>;
