@@ -197,6 +197,7 @@ void Scanner::getWord(char *str, char *token_ptr, Token **tok)
      if it is not a reserved word its an identifier.
      */
      
+    //This is not working properly. 
     TokenCode code;
     if (!isReservedWord(str, &code))
     {
