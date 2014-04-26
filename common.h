@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <cstring>
+#include <cstdlib>
 #include <time.h>
 
 #define FORM_FEED_CHAR          '\f'
