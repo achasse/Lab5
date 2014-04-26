@@ -10,7 +10,7 @@
 
 #include <stdlib.h>
 #include "common.h"
-#include "Token.h"
+#include "IdentifierToken.h"
 #include "Print.h"
 #include "Literal.h"
 #include "Literal.cpp"
