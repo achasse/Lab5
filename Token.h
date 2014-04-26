@@ -44,7 +44,7 @@ public:
     ~Token();
     void setCode(TokenCode newCode);
     TokenCode getCode();
-    void setType(LiteralType newType);
+    //void setType(LiteralType newType);
     //LiteralType getType();
     //void setLiteral(int newInteger);
     //int getIntLiteral();
