@@ -293,9 +293,10 @@ void Scanner::getString(char *str, char *token_ptr, Token **tok)
     *token_ptr = '\0';
     Literal<string> *temp = new Literal<string>(0);
     temp->setCode(STRING);
-    temp->setType(STRING_LIT);
+    //temp->setType(STRING_LIT);
     string test(str);
-    temp->setLiteral(test);
+    temp->setTokenString(test);
+    //temp->setLiteral(test);
     *tok = temp;
 }
 void Scanner::getSpecial(char *str, char *token_ptr, Token *tok)
