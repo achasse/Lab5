@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <sys/types.h>
-#include <string>
+#include <cstring>
 #include <time.h>
 
 #define FORM_FEED_CHAR          '\f'
