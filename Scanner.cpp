@@ -264,14 +264,14 @@ void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
     *token_ptr = '\0';
     if (int_type)
     {
-	Literal<int> *temp = new Literal<int>(0);
+	Literal<int> *temp = new Literal<int>((int)atoi(str));
         //temp->setType(INTEGER_LIT);
         //temp->setLiteral((int)atoi(str));
 	*tok = temp;
     }
     else
     {
-	Literal<float> *temp = new Literal<float>(0);
+	Literal<float> *temp = new Literal<float>((float)atof(str));
         //temp->setType(REAL_LIT);
         //temp->setLiteral((float)atof(str));
 	*tok = temp;
