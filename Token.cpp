@@ -9,30 +9,15 @@
 
 Token::Token()
 {
-    //What code do I need here to initialize everything.
-    //setLeftChild(NULL);
-    //setRightChild(NULL);
-    //list = NULL;
+
+}
+Token::Token(TokenCode newCode)
+{
+	this->setCode(newCode);
 }
 Token::~Token()
 {
-    //What code do I need here to free memory
 
-/*
-    LineNumberList *root = getLineNumberList();
-    LineNumberList *tmp = root;
-    
-    while (root != NULL)
-    {
-        tmp = tmp->getNextLineNumber();
-        delete root;
-        root = tmp;
-    }
-    if (this->getType() == STRING_LIT)
-    {
-        free(this->literal.stringLiteral);
-    }
-*/
 }
 void Token::setCode(TokenCode newCode)
 {
