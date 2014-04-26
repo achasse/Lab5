@@ -292,11 +292,11 @@ void Scanner::getString(char *str, char *token_ptr, Token **tok)
     }
     *token_ptr++ = *line_ptr++;
     *token_ptr = '\0';
-    Literal<string> *temp = new Literal<string>(0);
+    Literal<string> *temp = new Literal<string>(string(str));
     temp->setCode(STRING);
     //temp->setType(STRING_LIT);
-    string test(str);
-    temp->setTokenString(test);
+    //string test(str);
+    //temp->setTokenString(test);
     //temp->setLiteral(test);
     *tok = temp;
 }
