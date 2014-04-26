@@ -66,28 +66,7 @@ void Print::printToken(Token *token)
 {
     char line[MAX_SOURCE_LINE_LENGTH + 32];
     const char *symbol_string = SYMBOL_STRINGS[token->getCode()];
-    
-    /*
-    switch (token->getCode())
-    {
-        case NUMBER:
-            if (token->getType() == INTEGER_LIT)
-            {
-                sprintf(line, "    >> %-16s %d (integer)\n", symbol_string, token->getIntLiteral());
-            }
-            else
-            {
-                sprintf(line, "    >> %-16s %g (real)\n", symbol_string, token->getRealLiteral());
-            }
-            break;
-        case STRING:
-            sprintf(line, "    >> %-16s %-s\n", symbol_string, token->getStringLiteral().c_str());
-            break;
-        default:
-            sprintf(line, "    >> %-16s %-s\n", symbol_string, token->getTokenString().c_str());
-            break;
-    }
-    */
+
     sprintf(line, "    >> %-16s ", symbol_string);
     printLine(line);
     //now call the token's print function to print the actual data
@@ -111,7 +90,7 @@ void Print::printTreeRecursive(IdentifierToken *identifier)
     LineNumberList *list = identifier->getLineNumberList();
     while (list != NULL)
     {
-        cout << list->getLineNumber() << "\t";
+        cout << "\t" << list->getLineNumber() << "\t";
         list = list->getNextLineNumber();
     }
     cout << "\n";
