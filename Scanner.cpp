@@ -72,6 +72,7 @@ bool Scanner::getSourceLine(char source_buffer[])
         ++line_number;
         sprintf(print_buffer, "%4d: %s", line_number, source_buffer);
         print.printLine(print_buffer);
+        cout << endl;
         return true;
     }
     else
