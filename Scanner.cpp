@@ -199,13 +199,16 @@ void Scanner::getWord(char *str, char *token_ptr, Token **tok)
      
     //This is not working properly. 
     TokenCode code;
-    if (!isReservedWord(str, &code))
+    if (isReservedWord(str, &code))
     {
-        //set token to identifier
-	*tok = new Token();
-        (*tok)->setCode(code);
+        //NOT an identifier
+	*tok = new Token(code);
+        (*tok)->setTokenString(string(str));
     }
-    *tok = new IdentifierToken(string(str));
+    else
+    {
+    	*tok = new IdentifierToken(string(str));
+    }
 }
 void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
 {
