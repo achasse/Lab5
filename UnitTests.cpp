@@ -1,7 +1,7 @@
 /*
  * Authors: Aaron Chasse, Jake Borg, Deming Liu
- * CSE 220 - Lab 4
- * 04/09/2014
+ * CSE 220 - Lab 5
+ * 04/27/2014
  *
  * Program Description:
  * UnitTests.cpp contains methods for testing the public methods of the other classes.
