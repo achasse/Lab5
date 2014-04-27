@@ -13,7 +13,7 @@
 #include "UnitTests.h"
 
 UnitTests::UnitTests() {
-	/* bTree stuff */
+	/* IdentifierBinaryTree stuff */
 	a = new IdentifierToken();
 	b = new IdentifierToken();
 	c = new IdentifierToken();
@@ -24,7 +24,7 @@ UnitTests::UnitTests() {
 	d->setTokenString("d");
 }
 UnitTests::~UnitTests() {}
-/* bTree tests */
+/* IdentifierBinaryTree tests */
 bool UnitTests::testAddToTree() {
 	tree.addIdentifier(b,1);
 	tree.addIdentifier(a,0);
@@ -52,7 +52,7 @@ bool UnitTests::testDestroyTree() { // Currently, it's the test and not the meth
 	if(d != NULL) { printf("d not destroyed\n"); return 0; }
 	return 1;
 }
-/* LinkedList tests */
+/* LineNumberList tests */
 bool UnitTests::testAddToList() {
 	lines.setNextLineNumber(line1);
 	lines.setNextLineNumber(line1);
