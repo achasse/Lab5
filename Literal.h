@@ -1,6 +1,14 @@
 /*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: Literal.h
  * This is the header file for Literal.cpp
- */
+ *
+ *
+*/
+
 
 #ifndef __Lab5__Literal__
 #define __Lab5__Literal__ 
