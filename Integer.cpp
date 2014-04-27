@@ -11,7 +11,7 @@ class Integer : public Literal
   
   void print()
   {
-   sprintf("%-s\n", this->getTokenString().c_str() );
+   cout << this->getTokenString().c_str() << endl;
   }
   
 }
