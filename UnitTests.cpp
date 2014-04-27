@@ -14,10 +14,10 @@
 
 UnitTests::UnitTests() {
 	/* bTree stuff */
-	a = new Token();
-	b = new Token();
-	c = new Token();
-	d = new Token();
+	a = new IdentifierToken();
+	b = new IdentifierToken();
+	c = new IdentifierToken();
+	d = new IdentifierToken();
 	a->setTokenString("a");
 	b->setTokenString("b");
 	c->setTokenString("c");
@@ -26,10 +26,10 @@ UnitTests::UnitTests() {
 UnitTests::~UnitTests() {}
 /* bTree tests */
 bool UnitTests::testAddToTree() {
-	tree.addToTree(b,1);
-	tree.addToTree(a,0);
-	tree.addToTree(d,3);
-	tree.addToTree(c,2);
+	tree.addIdentifier(b,1);
+	tree.addIdentifier(a,0);
+	tree.addIdentifier(d,3);
+	tree.addIdentifier(c,2);
 	if(a != b->getLeftChild()) {
 		printf("addToTree left child\n");
 		return 0;
@@ -45,7 +45,7 @@ bool UnitTests::testAddToTree() {
 	return 1;
 }
 bool UnitTests::testDestroyTree() { // Currently, it's the test and not the method that's broken
-	tree.destroyTree();
+	delete tree;
 	if(a != NULL) { printf("a not destroyed\n"); return 0; }
 	if(b != NULL) { printf("b not destroyed\n"); return 0; }
 	if(c != NULL) { printf("c not destroyed\n"); return 0; }
