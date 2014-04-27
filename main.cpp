@@ -40,6 +40,24 @@ int main(int argc, const char * argv[])
     Scanner scanner(source_file, source_name, date, print);
     IdentifierBinaryTree tree;
     
+    //Test cases
+/*
+    UnitTests run;
+	int testing = 1; // Set to 1 to run unit tests
+	if(testing) {
+		if(!run.testAddToTree()) { printf("Failed testAddToTree\n"); }
+		if(!run.testAddToList()) { printf("Failed testAddToList\n"); }
+		if(!run.testDeleteList()) { printf("Failed testDeleteList\n"); }
+		if(!run.testDestroyTree()) { printf("Failed testDestroyTree\n"); }
+		if(!run.testSet()) { printf("Failed testSet\n"); }
+		if(!run.testGetToken(source_name, date, print)) { printf("Failed testGetToken\n"); }
+		if(!run.testCode()) { printf("Failed testCode\n"); }
+		if(!run.testIntLiteral()) { printf("Failed testIntLiteral\n"); }
+		if(!run.testRealLiteral()) { printf("Failed testRealLiteral\n"); }
+		if(!run.testStringLiteral()) { printf("Failed testStringLiteral\n"); }
+		if(!run.testTokenString()) { printf("Failed testTokenString\n"); }
+	}
+*/
     do
     {
         token = scanner.getToken();
