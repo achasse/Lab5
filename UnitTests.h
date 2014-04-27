@@ -52,12 +52,12 @@ class UnitTests {
 
 
 	private:
-		LinkedList lines;
-		bTree tree;
-		Token *a;
-		Token *b;
-		Token *c;
-		Token *d;
+		LineNumberList lines;
+		IdentifierBinaryTree tree;
+		IdentifierToken *a;
+		IdentifierToken *b;
+		IdentifierToken *c;
+		IdentifierToken *d;
 };
 
 #endif
