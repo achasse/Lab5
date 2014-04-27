@@ -1,9 +1,15 @@
-//
-//  Token.h
-//  Lab4
-//
-//  Created by Bryce Holton.
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: Token.h
+ *Header file contains the Token class definition.
+ *
+ *Created by Bryce Holton.
+ *
+*/
+
 
 #ifndef __Lab4__Token__
 #define __Lab4__Token__
@@ -15,54 +21,23 @@
 using namespace std;
 
 /**************
- this is a valid Pascal token.  A token must have a literal type,
- a literal value, and a token code.
+ this is a valid Pascal token.  
  ***************/
 class Token
 {
 private:
     TokenCode code;
     string tokenString;
-/*
-    LiteralType type;
 
-    union
-    {
-        int integer;
-        float real;
-        char *stringLiteral;
-    }
-    literal;
-*/
-    
-    //Token *leftChild;
-    //Token *rightChild;
-    //LineNumberList *list;
-    
 public:
     Token();
     Token(TokenCode newCode);
     ~Token();
     void setCode(TokenCode newCode);
     TokenCode getCode();
-    //void setType(LiteralType newType);
-    //LiteralType getType();
-    //void setLiteral(int newInteger);
-    //int getIntLiteral();
-    //void setLiteral(float newReal);
-    //float getRealLiteral();
-    //void setLiteral(string newString);
-    //string getStringLiteral();
     void setTokenString(string s);
     string getTokenString();
-    //void setLeftChild(Token *tok);
-    //Token *getLeftChild();
-    //void setRightChild(Token *tok);
-    //Token *getRightChild();
-    //void addToLineNumberList(LineNumberList *listItem);
-    //LineNumberList *getLineNumberList();
-
-    //the print function to be implemented
+    //the virtual print function
     virtual void print();
 };
 
