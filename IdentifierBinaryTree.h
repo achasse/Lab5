@@ -1,10 +1,15 @@
-//
-//  IdentifierBinaryTree.h
-//  Lab4
-//
-//  Created by Bryce Holton on 3/28/14.
-//  Copyright (c) 2014 Bryce Holton. All rights reserved.
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: IdentifierBinaryTree.h
+ *Header file contains the IdentifierBinaryTree class definition.
+ *
+ * Created by Bryce Holton on 3/28/14.
+ *
+*/
+
 
 #ifndef __Lab4__IdentifierBinaryTree__
 #define __Lab4__IdentifierBinaryTree__

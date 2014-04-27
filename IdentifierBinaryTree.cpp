@@ -1,10 +1,17 @@
-//
-//  IdentifierBinaryTree.cpp
-//  Lab4
-//
-//  Created by Bryce Holton on 3/28/14.
-//  Copyright (c) 2014 Bryce Holton. All rights reserved.
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: IdentifierBinaryTree.cpp
+ *Contains the methods needed to implement a Binary Search Tree. Recursive methods to add a new Identifier Token
+ *to the tree in alphabetic order, and destroy the tree when the tree deconstructor is called. 
+ *
+ * Created by Bryce Holton on 3/28/14.
+ *
+ */
+
+
 
 #include "IdentifierBinaryTree.h"
 #include "LineNumberList.h"

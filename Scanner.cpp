@@ -1,9 +1,19 @@
-//
-//  Scanner.cpp
-//  Lab4
-//
-//  Created by Bryce Holton.
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: Scanner.cpp
+ *Contains the methods to iterate through an input file line by line tokenizing the text based on
+ *what parameters the input falls under. A Token base pointer will point to a new type of Token created
+ *based on the type of data tha was found (either an actual Token, an IdentifierToken, or a Literal<T>)
+ *and returns a pointer to it for the calling function. Also contains a method to get each line of text
+ *from an input file.
+ *
+ *Created by Bryce Holton.
+ *
+*/
+
 
 #include "Scanner.h"
 #include "Print.h"
