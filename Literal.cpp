@@ -31,4 +31,4 @@ template<class T> void Literal<T>::print()
 
 template class Literal<string>;
 template class Literal<int>;
-template class Literal<float>;
+template class Literal<double>;
