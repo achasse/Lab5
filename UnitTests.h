@@ -44,7 +44,6 @@ class UnitTests {
 
 		/* Token tests */
 		bool testCode();
-		bool testType();
 		bool testIntLiteral();
 		bool testRealLiteral();
 		bool testStringLiteral();
