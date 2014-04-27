@@ -1,6 +1,14 @@
 /*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: Literal.cpp
  * This is the implementation file for template function for literal class.
- */
+ *
+ *
+*/
+
  
 #include "Literal.h"
 
