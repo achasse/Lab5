@@ -90,7 +90,7 @@ void Print::printTreeRecursive(IdentifierToken *identifier)
     LineNumberList *list = identifier->getLineNumberList();
     while (list != NULL)
     {
-        cout << "\t" << list->getLineNumber() << "\t";
+        cout << "  " << list->getLineNumber() << "  ";
         list = list->getNextLineNumber();
     }
     cout << "\n";
