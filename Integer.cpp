@@ -1,17 +1,18 @@
 /*
  * This is the Integer.cpp file
  */
- 
-class Integer : public Literal
+#include "Integer.h"
+
+class Integer : public Literal<int>
 {
   Integer::Integer() : Literal<int>(0)
   {
-  
+
   }
-  
-  void print()
+
+  void Integer::print()
   {
-   cout << this->getTokenString().c_str() << endl;
+   cout << this->getTokenString() << endl;
   }
-  
-}
+
+};
