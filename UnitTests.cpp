@@ -138,39 +138,46 @@ bool UnitTests::testCode() {
 }
 
 bool UnitTests::testIntLiteral() {
-	Token* token = new Token();
-	token->setLiteral(1234);
-	if(token->getIntLiteral() != 1234) { 
-		printf("Token get/setIntLiteral failed\n");
+	Token* token = NULL;
+	Literal<int> *test = new Literal<int>(1234);
+	if(token->getLiteral() != 1234) { 
+		printf("gettLiteral failed for int\n");
 		return 0;
 	}
+	delete test;
 	return 1;
 }
 bool UnitTests::testRealLiteral() {
-	Token* token = new Token();
-	token->setLiteral(5.67f);
-	if(abs(token->getRealLiteral()-5.67) >= .01*5.67) { 
-		printf("Token get/setRealLiteral failed\n");
+	Token* token = NULL;
+	Literal<float> *test = new Literal<float>(5.67f);
+	token = test;
+	if(abs(token->getLiteral()-5.67) >= .01*5.67) { 
+		printf("getLiteral failed for float\n");
 		return 0;
 	}
+	delete test;
 	return 1;
 }
 bool UnitTests::testTokenString() {
 	Token* token = new Token();
-	token->setTokenString("string");
-	if(token->getTokenString().compare("string") != 0) { 
-		printf("Token get/setTokenString failed\n");
+	string testStr = "Hello World!";
+	token->setTokenString(testStr.c_str());
+	if(token->getTokenString().compare("Hello World!") != 0) { 
+		printf("get/setTokenString failed\n");
 		return 0;
 	}
+	delete token;
 	return 1;
 }
 
 bool UnitTests::testStringLiteral() {
-	Token* token = new Token();
-	token->setLiteral("string");
-	if(token->getStringLiteral().compare("string") != 0) { 
-		printf("Token get/setStringLiteral failed\n");
+	Token* token = NULL;
+	string testStr = "string";
+	Literal<string> *test = new Literal<string>(testStr.c_str());
+	if(token->getLiteral().compare("string") != 0) { 
+		printf("getLiteral failed fo string\n");
 		return 0;
 	}
+	delete test;
 	return 1;
 }
