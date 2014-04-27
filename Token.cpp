@@ -1,9 +1,16 @@
-//
-//  Token.cpp
-//  Lab4
-//
-//  Created by Bryce Holton.
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: Token.cpp
+ *Contains the methods inherent to the Token object needed to get and set the internal data. 
+ *This will be the base Token type which other Token objects will inherit from.
+ *
+ *Created by Bryce Holton.
+ *
+*/
+
 
 #include "Token.h"
 
