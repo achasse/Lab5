@@ -65,13 +65,13 @@ bool UnitTests::testAddToList() {
 	return 1;
 }
 bool UnitTests::testDeleteList() {
-	lines.deleteList();
+	delete lines;
 	if(lines.getLine() != 0) { printf("delete list not working"); return 0;}
 	return 1; //? How to test inner nodes?
 }
 bool UnitTests::testSet() {
-	lines.set(17);
-	if(lines.getLine() != 17) {
+	lines.setLineNumber(17);
+	if(lines.getLineNumber() != 17) {
 		printf("line not set to 17");
 		return 0;
 	}
@@ -133,17 +133,10 @@ bool UnitTests::testCode() {
 		printf("Token get/setCode failed\n");
 		return 0;
 	}
+	delete token;
 	return 1;
 }
-bool UnitTests::testType() {
-	Token* token = new Token();
-	token->setType(INTEGER_LIT);
-	if(token->getType() != INTEGER_LIT) { 
-		printf("Token get/setType failed\n");
-		return 0;
-	}
-	return 1;
-}
+
 bool UnitTests::testIntLiteral() {
 	Token* token = new Token();
 	token->setLiteral(1234);
