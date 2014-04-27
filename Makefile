@@ -1,6 +1,6 @@
 #Team members: Aaron Chasse, Jake Borg, Doug Liu
-#CSE 220 - Lab 3
-
+#CSE 220 - Lab 5
+#4/27/2014
 
 #!/bin/bash
 # File: Makefile
