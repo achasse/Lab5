@@ -1,9 +1,16 @@
-//
-//  Scanner.h
-//  Lab4
-//
-//  Created by Bryce Holton.
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: Scanner.h
+ *Header file for Scanner.cpp contains the Scanner class definition. Includes other header files
+ *needed for implementation.
+ *
+ *Created by Bryce Holton.
+ *
+*/
+
 
 #ifndef Lab4_Scanner_h
 #define Lab4_Scanner_h
