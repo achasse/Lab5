@@ -13,7 +13,7 @@ Token::Token()
 }
 Token::Token(TokenCode newCode)
 {
-	this->setCode(newCode);
+	this->code = newCode;
 }
 Token::~Token()
 {
