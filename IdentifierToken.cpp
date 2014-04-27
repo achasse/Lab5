@@ -1,7 +1,17 @@
-//
-//
-//
-//
+/*
+ *Authors: Aaron Chasse, Jake Borg, Deming Liu
+ *CSE 220 - Lab 5
+ *04/27/2014
+ *
+ *Program Description: IdentifierToken.cpp
+ *Inherits from the Token class.
+ *Contains the methods inherent to the IdentifierToken object needed to get and set the internal data. 
+ *When Token deconstructor is called it will systematically delete its internal Linked list 'LineNumberList'.
+ *
+ *
+ *
+*/
+
 
 #include "IdentifierToken.h"
 
