@@ -18,9 +18,9 @@
 #include "common.h"
 #include "Print.h"
 #include "Scanner.h"
-#include "Token.h"
-#include "bTree.h"
-#include "LinkedList.h"
+#include "IdentifierToken.h"
+#include "IdentifierBinaryTree.h"
+#include "LineNumberList.h"
 
 using namespace std;
 
