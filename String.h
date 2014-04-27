@@ -14,7 +14,7 @@ class String : public Literal<string>
   public:
 
     String();
-    virtual ~String();
+    ~String();
     virtual void print();
 
 };
