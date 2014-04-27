@@ -1,17 +1,18 @@
 /*
  * This is the Real.cpp file
  */
- 
-class Real : public Literal
+
+#include "Real.h"
+
+class Real : public Literal<double>
 {
-  Real::Real() : Literal<double>(0.0)
-  {
-  
-  }
-  
-  void print()
-  {
-   cout << this->getTokenString().c_str() << endl;
-  }
-  
-}
+	Real::Real() : Literal<double>(0.0)
+	{
+
+	}
+
+	void Real::print()
+	{
+		cout << this->getTokenString().c_str() << endl;
+	}
+};
