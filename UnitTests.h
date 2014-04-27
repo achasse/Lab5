@@ -31,18 +31,18 @@ class UnitTests {
 		/* Scanner tests */
 		bool testGetToken(char source_name[], char date[], Print printer);
 
-		/* bTree tests */
+		/* IdentifierBinaryTree tests */
 		bool testAddToTree();
 		bool testDestroyTree();
 		bool testPrintTree();
 
-		/* LinkedList tests */
+		/* LineNumberList tests */
 		bool testAddToList();
 		bool testPrintList();
 		bool testDeleteList();
 		bool testSet();
 
-		/* Token tests */
+		/* Token tests (includes tests of Literal Template class) */
 		bool testCode();
 		bool testIntLiteral();
 		bool testRealLiteral();
