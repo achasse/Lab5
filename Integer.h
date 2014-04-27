@@ -1,20 +1,24 @@
 /*
  * This is the header file for String.cpp
  */
- 
+
 #ifndef __Lab5__String__
 #define __Lab5__String__
 
 #include "Token.h"
 #include "Literal.h"
+#include "Literal.cpp"
 
-class Integer : public Literal
+using namespace std;
+
+class Integer : public Literal<int>
 {
   public:
-    
-    Integer() : Literal<int>(0);
+
+    Integer();
+    ~Integer();
     virtual void print();
-    
+
 };
 
 #endif
