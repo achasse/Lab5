@@ -54,14 +54,14 @@ bool UnitTests::testDestroyTree() { // Currently, it's the test and not the meth
 }
 /* LinkedList tests */
 bool UnitTests::testAddToList() {
-	lines.addToList(1);
-	lines.addToList(1);
-	lines.addToList(2);
-	lines.addToList(3);
-	if(lines.getNext()->getLine() != 1) { printf("depth 0 not set\n"); return 0; }
-	if(lines.getNext()->getNext()->getLine() != 1) { printf("depth 1 not set\n"); return 0; }
-	if(lines.getNext()->getNext()->getNext()->getLine() != 2) { printf("depth 2 not set\n"); return 0; }
-	if(lines.getNext()->getNext()->getNext()->getNext()->getLine() != 3) { printf("depth 3 not set\n"); return 0; }
+	lines.setNextLineNumber(line1);
+	lines.setNextLineNumber(line1);
+	lines.setNextLineNumber(line2);
+	lines.setNextLineNumber(line3);
+	if(lines.getNextLineNumber()->getLineNumber() != 1) { printf("depth 0 not set\n"); return 0; }
+	if(lines.getNextLineNumber()->getNextLineNumber()->getLineNumber() != 1) { printf("depth 1 not set\n"); return 0; }
+	if(lines.getNextLineNumber()->getNextLineNumber()->getNextLineNumber())->getLineNumber() != 2) { printf("depth 2 not set\n"); return 0; }
+	if(lines.getNextLineNumber()->getNextLineNumber()->getNextLineNumber()->getNextLineNumber()->getLineNumber() != 3) { printf("depth 3 not set\n"); return 0; }
 	return 1;
 }
 bool UnitTests::testDeleteList() {
