@@ -53,6 +53,16 @@ class UnitTests {
 
 	private:
 		LineNumberList lines;
+		
+		LineNumberList lines1;
+		lines1.setLineNumber(1);
+		
+		LineNumberList lines2;
+		lines2.setLineNumber(2);
+		
+		LineNumberList lines3;
+		lines3.setLineNumber(3);
+		
 		IdentifierBinaryTree tree;
 		IdentifierToken *a;
 		IdentifierToken *b;
