@@ -279,24 +279,18 @@ void Scanner::getNumber(char *str, char *token_ptr, Token **tok)
     if (int_type)
     {
 	Literal<int> *temp = new Literal<int>((int)atoi(str));
-        //temp->setType(INTEGER_LIT);
-        //temp->setLiteral((int)atoi(str));
 	*tok = temp;
     }
     else
     {
 	Literal<float> *temp = new Literal<float>((float)atof(str));
-        //temp->setType(REAL_LIT);
-        //temp->setLiteral((float)atof(str));
 	*tok = temp;
     }
     (*tok)->setCode(NUMBER);
 }
 void Scanner::getString(char *str, char *token_ptr, Token **tok)
 {
-    /*
-     Write some code to Extract the string
-     */
+
     *token_ptr++ = '\'';
     char ch = *(++line_ptr);
     while (ch != '\'')
@@ -308,10 +302,6 @@ void Scanner::getString(char *str, char *token_ptr, Token **tok)
     *token_ptr = '\0';
     Literal<string> *temp = new Literal<string>(string(str));
     temp->setCode(STRING);
-    //temp->setType(STRING_LIT);
-    //string test(str);
-    //temp->setTokenString(test);
-    //temp->setLiteral(test);
     *tok = temp;
 }
 void Scanner::getSpecial(char *str, char *token_ptr, Token *tok)
